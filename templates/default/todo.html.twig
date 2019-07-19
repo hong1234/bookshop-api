@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% block title %}TodoList Admin{% endblock %}
+ {% block stylesheets %}
+           {# 'app' must match the first argument to addEntry() in webpack.config.js #}
+           {{ encore_entry_link_tags('todo') }}
+           <!-- Renders a link tag (if your module requires any CSS)
+                 <link rel="stylesheet" href="/build/todo.css"> -->
+        {% endblock %}
+{% block body %}
+    <div id = "root" class="container">
+    </div>
+{% endblock %}
+{% block javascripts %}
+           {{ encore_entry_script_tags('todo') }}
+           <!-- Renders app.js & a webpack runtime.js file
+                <script src="/build/runtime.js"></script>
+                <script src="/build/todo.js"></script> -->
+        {% endblock %}
